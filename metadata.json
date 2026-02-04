@@ -1,0 +1,8 @@
+{
+  "name": "Venture Connect",
+  "description": "A direct bridge between young innovators and investors, featuring an AI Pitch Coach, 90-second Pitch Room, and direct VC networking.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
