@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect, createContext, useContext } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import { HashRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { User, UserRole } from './types';
 
@@ -8,8 +7,8 @@ import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import Dashboard from './pages/Dashboard';
-import IdeaVault from './pages/IdeaVault';
-import AICoach from './pages/AICoach';
+import IdeaWorkspace from './pages/IdeaWorkspace';
+import VCReadinessReport from './pages/VCReadinessReport';
 import Messages from './pages/Messages';
 import Profile from './pages/Profile';
 import Opportunities from './pages/Opportunities';
@@ -122,22 +121,22 @@ export default function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
-          
+
           <Route path="/dashboard" element={
             <ProtectedRoute>
               <MainLayout><Dashboard /></MainLayout>
             </ProtectedRoute>
           } />
-          
-          <Route path="/vault" element={
+
+          <Route path="/workspace" element={
             <ProtectedRoute>
-              <MainLayout><IdeaVault /></MainLayout>
+              <MainLayout><IdeaWorkspace /></MainLayout>
             </ProtectedRoute>
           } />
 
-          <Route path="/coach" element={
+          <Route path="/vc-readiness" element={
             <ProtectedRoute roles={[UserRole.FOUNDER]}>
-              <MainLayout><AICoach /></MainLayout>
+              <MainLayout><VCReadinessReport /></MainLayout>
             </ProtectedRoute>
           } />
 
