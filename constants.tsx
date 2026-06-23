@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   LayoutDashboard, 
@@ -7,7 +6,6 @@ import {
   BrainCircuit, 
   MessageSquare, 
   User, 
-  LogOut, 
   Calendar, 
   Trophy
 } from 'lucide-react';
@@ -21,11 +19,11 @@ export const COLORS = {
 
 export const SIDEBAR_ITEMS = [
   { id: 'dashboard', label: 'Dashboard', icon: <LayoutDashboard size={20} />, roles: ['FOUNDER', 'INVESTOR', 'ADMIN'] },
-  { id: 'vault', label: 'Idea Vault', icon: <Lightbulb size={20} />, roles: ['FOUNDER', 'INVESTOR'] },
+  { id: 'workspace', label: 'Idea Workspace', icon: <Lightbulb size={20} />, roles: ['FOUNDER', 'INVESTOR'] },
   { id: 'apply', label: 'Submit to VC', icon: <Send size={20} />, roles: ['FOUNDER'] },
   { id: 'opportunities', label: 'Opportunities', icon: <Trophy size={20} />, roles: ['FOUNDER'] },
   { id: 'unicorn', label: 'Unicorn Meeting', icon: <Calendar size={20} />, roles: ['FOUNDER'] },
-  { id: 'coach', label: 'AI Coach', icon: <BrainCircuit size={20} />, roles: ['FOUNDER'] },
+  { id: 'vc-readiness', label: 'VC Readiness Report', icon: <BrainCircuit size={20} />, roles: ['FOUNDER'] },
   { id: 'messages', label: 'Messages', icon: <MessageSquare size={20} />, roles: ['FOUNDER', 'INVESTOR'] },
   { id: 'profile', label: 'Profile', icon: <User size={20} />, roles: ['FOUNDER', 'INVESTOR', 'ADMIN'] },
 ];
